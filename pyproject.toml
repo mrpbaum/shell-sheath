@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shell-sheath"
+version = "0.1.0"
+description = "Policy-filtered host and container diagnostics over MCP"
+requires-python = ">=3.10"
+dependencies = ["fastmcp==2.14.5"]
+
+[project.scripts]
+shell-sheath = "safe_ops:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["safe_ops", "request_logging"]
